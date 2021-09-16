@@ -1,3 +1,9 @@
 ---
+---
+- name: copy compose file
+  copy:
+    src: files/load-balancing
+    dest: ~/load-balancing
+
 - name: deploy Docker Compose stack
-  command: docker-compose -f ~/api-work/files/load-balancing/docker-compose.yml up -d 
+  command: docker-compose -f ~/load-balancing/docker-compose.yml up -d 
